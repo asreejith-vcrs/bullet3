@@ -32,6 +32,8 @@ IF(BUILD_GIMPACTUTILS_EXTRA)
   SUBDIRS( GIMPACTUtils )
 ENDIF()
 
+SUBDIRS(SimpleGUI)
+
 
 #Maya Dynamica plugin is moved to http://dynamica.googlecode.com
 

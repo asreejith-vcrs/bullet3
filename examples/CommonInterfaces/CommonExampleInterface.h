@@ -81,7 +81,9 @@ public:
 	virtual int getExampleOption(int index) = 0;
 };
 
+#ifndef USE_SIMPLE_GUI
 CommonExampleInterface* StandaloneExampleCreateFunc(CommonExampleOptions& options);
+#endif
 
 #ifdef B3_USE_STANDALONE_EXAMPLE
 #define B3_STANDALONE_EXAMPLE(ExampleFunc)                                             \
