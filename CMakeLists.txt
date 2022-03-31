@@ -442,7 +442,10 @@ IF(BUILD_EXTRAS)
   SUBDIRS(Extras)
 ENDIF(BUILD_EXTRAS)
 
-
+OPTION(BUILD_VISUALIZATION "Set when you want to build library with visualization" ON)
+IF(BUILD_EXTRAS)
+  SUBDIRS(SimpleGUI)
+ENDIF(BUILD_EXTRAS)
 
 SUBDIRS(src)
 
