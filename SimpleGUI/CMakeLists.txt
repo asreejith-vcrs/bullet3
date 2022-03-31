@@ -12,10 +12,10 @@ INCLUDE_DIRECTORIES(
 
 SET(Bullet3SimpleGui_SRCS 
     ${BULLET_PHYSICS_SOURCE_DIR}/build3/bullet.rc
-    ../../examples/ExampleBrowser/OpenGLGuiHelper.cpp
-    ../../examples/ExampleBrowser/GL_ShapeDrawer.cpp
-    ../../examples/ExampleBrowser/CollisionShape2TriangleMesh.cpp
-    ../../examples/Utils/b3Clock.cpp
+    ../examples/ExampleBrowser/OpenGLGuiHelper.cpp
+    ../examples/ExampleBrowser/GL_ShapeDrawer.cpp
+    ../examples/ExampleBrowser/CollisionShape2TriangleMesh.cpp
+    ../examples/Utils/b3Clock.cpp
 
 )
 
@@ -31,7 +31,7 @@ ADD_DEFINITIONS(-DPHYSICS_SERVER_DIRECT)
 ADD_LIBRARY(Bullet3SimpleGui ${Bullet3SimpleGui_SRCS})
 ADD_DEFINITIONS(-DB3_USE_STANDALONE_EXAMPLE)
 
-TARGET_LINK_LIBRARIES(Bullet3SimpleGui BulletInverseDynamicsUtils BulletWorldImporter BulletFileLoader BulletSoftBody BulletDynamics BulletCollision BulletInverseDynamics LinearMath Bullet3Common OpenGLWindow)
+TARGET_LINK_LIBRARIES(Bullet3SimpleGui BulletSoftBody BulletDynamics BulletCollision LinearMath Bullet3Common OpenGLWindow)
 
 
 INSTALL (
